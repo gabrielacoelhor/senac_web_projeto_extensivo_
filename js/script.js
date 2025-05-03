@@ -28,6 +28,31 @@ toggleBtn.addEventListener("click", () => {
   themeIcon.alt = darkMode ? "Modo claro" : "Modo escuro";
 });
 
+const menuBtn = document.getElementById('hamburguer-btn');
+const closeBtn = document.getElementById('close-menu');
+const sideMenu = document.getElementById('side-menu');
+
+// Abre o menu
+menuBtn.addEventListener('click', () => {
+  sideMenu.classList.add('active');
+});
+
+// Fecha o menu
+closeBtn.addEventListener('click', () => {
+  sideMenu.classList.remove('active');
+});
+
+// Detecta clique fora do menu para fechá-lo
+document.addEventListener('click', function(event) {
+  const isClickInsideMenu = sideMenu.contains(event.target);
+  const isClickOnMenuButton = menuBtn.contains(event.target);
+
+  // Se o menu estiver aberto, e o clique for fora do menu e fora do botão, fecha
+  if (sideMenu.classList.contains('active') && !isClickInsideMenu && !isClickOnMenuButton) {
+    sideMenu.classList.remove('active');
+  }
+});
+
 const cart = {};
 const prices = {
   "Tradicional": 8,
