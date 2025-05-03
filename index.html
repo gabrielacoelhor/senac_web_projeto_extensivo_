@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu Cookie</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+   <header class="header">
+      <a href="#home"><img src="images/logo.png" alt="Seu Cookie" class="logo"></a>
+
+      <nav>
+        <ul>
+          <li><a href="index.html#menu">Cardápio</a></li>
+          <li><a href="index.html#como-comprar">Como comprar?</a></li>
+          <li><a href="index.html#delivery">Entrega e Retirada</a></li>
+          <li><a href="index.html#depoimentos">Depoimento de clientes</a></li>
+          <li><a href="index.html#contact">Contato</a></li>
+        </ul>
+      </nav>
+      
+      <section class="buttons">
+      <button id="toggle-theme" class="theme-btn">
+        <img id="theme-icon" src="images/moon.png" alt="Modo Escuro" />
+      </button>
+
+    </header>
+
+    <main>
+      <section id="home">
+        <div class="content">
+          <h1>BEM-VINDO!</h1>
+          <h2>A sua loja de cookies favorita</h2>
+          
+          <div class="highlights">
+            <div class="highlight-item">
+              <img src="https://img.icons8.com/?size=100&id=12878&format=png&color=000000" alt="Artisan cookie icon">
+              <strong>Cookies Artesanais</strong>
+            </div>
+            <div class="highlight-item">
+              <img src="https://img.icons8.com/?size=100&id=a8HnOOAGo8em&format=png&color=000000" alt="Freshness icon">
+              <strong>Fresquinhos Sempre</strong>
+            </div>
+            <div class="highlight-item">
+              <img src="https://img.icons8.com/?size=100&id=11910&format=png&color=000000" alt="Fast delivery icon">
+              <strong>Entrega Rápida</strong>
+            </div>
+          </div>
+          
+          
+          <a href="#menu" class="btn">
+            Veja nosso cardápio!
+            <span class="arrow">↓</span>
+          </a>
+        </div>
+    </section>
+    
+    <section id="menu">
+      <h2 class="menu-title">Nossos Cookies</h2>
+      <div class="cookie-scroll-container"> 
+          <div class="cookie-card">
+            <img src="images/tradicional.png" alt="Cookie 1">
+            <h3>Tradicional</h3>
+            <p>O clássico, o cookie tradicional com gotas de chocolate ao leite e chocolate branco.</p>
+            <span class="price">R$8,00</span>
+            <button class="add-btn" onclick="addToCart('Tradicional')">Adicionar</button>
+          </div>
+          <div class="cookie-card">
+            <img src="images/chocolate.png" alt="Cookie 2">
+            <h3>Chocolate</h3>
+            <p>Cookie de chocolate com gotas de chocolate ao leite.</p>
+            <span class="price">R$8,00</span>
+            <button class="add-btn" onclick="addToCart('Chocolate')">Adicionar</button>
+          </div>
+          <div class="cookie-card">
+            <img src="images/chocolatebranco.png" alt="Cookie 3">
+            <h3>Chocolate Branco</h3>
+            <p>Cookie tradicional com gotas de chocolate branco.</p>
+            <span class="price">R$9,00</span>
+            <button class="add-btn" onclick="addToCart('Chocolate Branco')">Adicionar</button>
+          </div>
+          <div class="cookie-card">
+            <img src="images/chocolateduo.png" alt="Cookie 4">
+            <h3>Chocolate Duo</h3>
+            <p>Chocolate intenso, com gotas de chocolate branco.</p>
+            <span class="price">R$9,00</span>
+            <button class="add-btn" onclick="addToCart('Chocolate Duo')">Adicionar</button>
+          </div>
+          <div class="cookie-card">
+            <img src="images/redvelvet.png" alt="Cookie 5">
+            <h3>Red Velvet</h3>
+            <p>Cookie de massa vermelha com gotas de chocolate branco.</p>
+            <span class="price">R$9,00</span>
+            <button class="add-btn" onclick="addToCart('Red Velvet')">Adicionar</button>
+          </div>
+          <div class="cookie-card">
+            <img src="images/limao.png" alt="Cookie 6">
+            <h3>Limão Siciliano</h3>
+            <p>Cookie de limão com recheio de brigadeiro de limão siciliano.</p>
+            <span class="price">R$12,00</span>
+            <button class="add-btn" onclick="addToCart('Limão Siciliano')">Adicionar</button>
+          </div>
+          <div class="cookie-card">
+            <img src="images/nutella.png" alt="Cookie 7">
+            <h3>Nutella</h3>
+            <p>Cookie tradicional com gotas de chocolate meio amargo e recheio de Nutella.</p>
+            <span class="price">R$12,00</span>
+            <button class="add-btn" onclick="addToCart('Nutella')">Adicionar</button>
+          </div>
+          <div class="cookie-card">
+            <img src="images/pacoca.png" alt="Cookie 8">
+            <h3>Paçoca Recheado</h3>
+            <p>Cookie de paçoca com recheio de brigadeiro de paçoca.</p>
+            <span class="price">R$12,00</span>
+            <button class="add-btn" onclick="addToCart('Paçoca Recheado')">Adicionar</button>
+          </div>
+          <div class="cookie-card">
+            <img src="images/prestigio.png" alt="Cookie 9">
+            <h3>Prestigio</h3>
+            <p>Cookie de chocolate com gotas de leite com recheio de brigadeiro de coco.</p>
+            <span class="price">R$12,00</span>
+            <button class="add-btn" onclick="addToCart('Prestigio')">Adicionar</button>
+          </div>
+          <div class="cookie-card">
+            <img src="images/redvelvet.png" alt="Cookie 10">
+            <h3>Red Velvet Recheado</h3>
+            <p>Cookie de massa vermelha com gotas de chocolate branco com recheio de brigadeiro de baunilha.</p>
+            <span class="price">R$12,00</span>
+            <button class="add-btn" onclick="addToCart('Red Velvet Recheado')">Adicionar</button>
+          </div>
+        </div>
+    </section>
+    
+    <section id="como-comprar">
+      <h2 class="section-title">Como Comprar?</h2>
+          <div class="instructions">
+            <p>Escolha os cookies que deseja e adicione ao carrinho.</p> 
+            <p>Depois, copie a mensagem gerada abaixo e envie pelo WhatsApp para fazer seu pedido!</p>
+          </div>
+          <div class="order-summary">
+            <h3>Seu Pedido</h3>
+            <textarea id="order-text" readonly></textarea>
+            <p class="total">Total: <span id="total-price">R$0,00</span> + Taxa de entrega</p>            
+            <div class="summary-actions">
+              <div class="left-buttons">
+               <button onclick="copyToClipboard()">Copiar Pedido</button>
+               <button onclick="clearCart()" class="clear-btn">Limpar Pedido</button>
+              </div>
+              <a class="whatsapp-btn" href="https://wa.me/5511963570602?" target="_blank">
+                <i class="fab fa-whatsapp"></i> <strong>Whatsapp</strong>
+              </a>
+            </div>
+          </div>
+    </section>
+
+    <section id="delivery" class="delivery-section">
+      <h2>Entrega e Retirada</h2>
+      <div class="delivery-columns">
+        <p>
+          Após finalizar seu pedido, a entrega ou retirada será combinada diretamente com a vendedora.
+          Você poderá ajustar o horário, dia e local conforme sua preferência, além de alinhar a taxa de entrega, se aplicável.
+        </p>
+        <span class="separator"></span>
+        <p>
+          Fique tranquilo! Após o envio da mensagem via WhatsApp, entraremos em contato o mais rápido possível
+          para definir todos os detalhes com você.
+        </p>
+      </div>
+    </section>
+    
+    <section id="depoimentos" class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Depoimentos de Clientes</h2>
+        <p class="section-subtitle">Alguns relatos carinhosos de quem já experimentou nossos cookies!</p>
+    
+        <div class="cards-wrapper">
+          <!-- Card 1 -->
+          <div class="testimonial-card fade-in">
+            <h3>@lucasbento</h3>
+            <p class="comment">Os cookies são simplesmente incríveis! Derretem na boca!</p>
+            <span class="order-info">Pedido: 3 Tradicionais, 1 Chocolate Duo, 1 Prestigio</span>
+            <div class="stars">★★★★★</div>
+          </div>
+    
+          <!-- Card 2 -->
+          <div class="testimonial-card fade-in">
+            <h3>@luvsgabyys</h3>
+            <p class="comment">A entrega foi super rápida e o sabor é inesquecível!</p>
+            <span class="order-info">Pedido: 2 Red Velvet, 1 Paçoca Recheado</span>
+            <div class="stars">★★★★★</div>
+          </div>
+    
+          <!-- Card 3 -->
+          <div class="testimonial-card fade-in">
+            <h3>@gabrielleeallves</h3>
+            <p class="comment">Atendimento excelente, virei cliente fiel!</p>
+            <span class="order-info">Pedido: 1 Tradicional, 1 Limão Sicilieano, 1 Nutella</span>
+            <div class="stars">★★★★★</div>
+          </div>
+    
+          <!-- Card 4 -->
+          <div class="testimonial-card fade-in">
+            <h3>@amaandaplza</h3>
+            <p class="comment">Pedi para familia e todos amaram!</p>
+            <span class="order-info">Pedido: 1 Prestigio, 1 Red Velvet, 1 Paçoca Recheado</span>
+            <div class="stars">★★★★</div>
+          </div>
+    
+          <!-- Card 5 -->
+          <div class="testimonial-card fade-in">
+            <h3>@wtfhellss</h3>
+            <p class="comment">O cookie de paçoca é surreal!</p>
+            <span class="order-info">Pedido: 3 Paçoca Recheado</span>
+            <div class="stars">★★★★</div>
+          </div>
+    
+          <!-- Card 6 -->
+          <div class="testimonial-card fade-in">
+            <h3>@marcelaambrogii</h3>
+            <p class="comment">Melhor sobremesa que já comi, sem dúvidas.</p>
+            <span class="order-info">Pedido: 2 Red Velvet Recheado</span>
+            <div class="stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contato</h2>
+      <div class="contact-columns">
+        <p>Ficou com alguma dúvida ou quer fazer seu pedido?<br>
+        Fale com a gente pelo WhatsApp ou acompanhe nosso trabalho no Instagram!</p>
+        <span class="contact-separator"></span>
+        <p>
+          <a class="whatsapp-btn" href="https://wa.me/5511963570602?" target="_blank">
+            <i class="fab fa-whatsapp"></i> <strong>Whatsapp</strong></a>
+            <a class="instagram-btn" href="https://www.instagram.com/_seu.cookie?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+              <i class="fab fa-instagram"></i> <strong>Instagram</strong></a>
+        </p>
+      </div>
+    </section>
+    </main>
+
+    <footer>
+      <p data-translate="footer-copyright">© 2025 Seu Cookie. All rights reserved.</p>
+      <p data-translate="footer-made">Made with ❤️</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
